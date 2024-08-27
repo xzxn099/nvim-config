@@ -1,21 +1,22 @@
 return {
-	"jose-elias-alvarez/null-ls.nvim",
-	dependencies = { "nvim-lua/plenary.nvim" },
-	config = function()
-		local null_ls = require("null-ls")
+  "nvimtools/none-ls.nvim",
+  dependencies = { "nvim-lua/plenary.nvim" },
+  config = function()
+    local null_ls = require("null-ls")
 
-		null_ls.setup({
-			sources = {
-				null_ls.builtins.formatting.prettier.with({
-					filetypes = { "javascript", "typescript", "css", "html", "json", "yaml", "markdown" }
-				}),
-				null_ls.builtins.formatting.rustfmt, -- For Rust
-				-- Add more formatters as needed
-			},
-		})
+    null_ls.setup({
+      sources = {
+        null_ls.builtins.formatting.stylua,
+        null_ls.builtins.formatting.biome,
+        null_ls.builtins.completion.spell,
+        null_ls.builtins.formatting.dxfmt,
+      },
+    })
 
-		vim.keymap.set("n", "<C-l>", "<cmd>lua vim.lsp.buf.format({ async = true })<CR>", { noremap = true, silent = true })
-
-	end,
+    vim.keymap.set("n", "<C-l>", function() 
+      vim.lsp.buf.format({ async = true }) 
+    end, { noremap = true, silent = true })
+  end,
 }
+
 
