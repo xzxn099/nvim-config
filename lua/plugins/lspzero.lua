@@ -19,6 +19,7 @@ return {
       vim.keymap.set({'n', 'x'}, '<F3>', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', opts)
       vim.keymap.set('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
 
+      vim.lsp.inlay_hint.enable(true, { 0 })
       -- if client.server_capabilities.inlayHintProvider then
       --   vim.lsp.inlay_hint(bufnr, true) 
       -- end
@@ -30,7 +31,16 @@ return {
       capabilities = require('cmp_nvim_lsp').default_capabilities(),
     })
 
-    require('lspconfig').rust_analyzer.setup({})
+    require('lspconfig').rust_analyzer.setup({
+      settings = {
+        ['rust-analyzer'] = {
+          diagnostics = {
+            enable = true;
+          }
+        }
+      }
+
+    })
     require('lspconfig').tsserver.setup({})
 
     ---
