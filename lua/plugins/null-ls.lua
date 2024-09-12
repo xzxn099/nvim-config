@@ -9,7 +9,7 @@ return {
         null_ls.builtins.formatting.stylua,
         null_ls.builtins.formatting.biome,
         null_ls.builtins.completion.spell,
-        null_ls.builtins.formatting.dxfmt,
+        -- null_ls.builtins.formatting.dxfmt,
       },
     })
 
