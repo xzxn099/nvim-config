@@ -23,6 +23,8 @@ return {
 
     require('mini.map').setup()
 
+    require('mini.indentscope').setup()
+
     local miniclue = require('mini.clue')
     miniclue.setup({
       triggers = { -- Leader triggers

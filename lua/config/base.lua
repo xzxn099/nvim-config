@@ -16,3 +16,7 @@ vim.api.nvim_set_keymap('n', '<leader>P', '"+P', { noremap = true, silent = true
 vim.api.nvim_set_keymap('v', '<leader>p', '"+p', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '<leader>P', '"+P', { noremap = true, silent = true })
 
+vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+  pattern = "*.cql",
+  command = "set filetype=sql"
+})
