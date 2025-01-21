@@ -8,6 +8,9 @@ return {
       },
       indent = {
         enable = true,
+        style = {
+         "#171d24" -- "#14191f",
+        },
       },
       line_num = {
         enable = true,
@@ -18,3 +21,4 @@ return {
     })
   end
 }
+
