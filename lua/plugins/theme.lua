@@ -4,16 +4,10 @@ return {
 	priority = 1000,
 	opts = {
     theme = {
-      style = "dark", 
       transparent = true, 
     },
     colors = {
-      mode = "dark", 
       fluo = "cyan", 
-      custom = {
-        saturation = "70", 
-        light = "65", 
-      },
     },
     ui = {
       borders = "theme", -- "theme" | "inverse" | "fluo" | "none"
