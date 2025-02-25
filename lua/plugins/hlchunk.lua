@@ -16,7 +16,7 @@ return {
         enable = true,
       },
       blank = {
-        enable = true,
+        enable = false,
       }
     })
   end
