@@ -2,7 +2,7 @@ return {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate", config = functio
 	local configs = require("nvim-treesitter.configs")
 
 	configs.setup({
-		ensure_installed = {"lua", "query", "javascript", "html", "css", "typescript", "rust", "sql", "markdown", "markdown_inline"},
+		ensure_installed = {"lua", "query", "javascript", "html", "css", "typescript", "rust", "sql", "markdown", "markdown_inline", "swift"},
 		sync_install = false,
 		highlight = { enable = true },
 		indent = { enable = true },  
