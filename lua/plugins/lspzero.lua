@@ -40,9 +40,12 @@ return {
 						diagnostics = {
 							enable = true,
 						},
-            cfg = {
-              setTest = false, -- or false, depending on what you want
+            checkOnSave = {
+              command = "clippy",
             },
+            -- cfg = {
+            --   setTest = false, -- or false, depending on what you want
+            -- },
 					},
 				},
 			})
