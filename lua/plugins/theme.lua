@@ -5,10 +5,9 @@ return {
   opts = {
     theme = { 
       style = "dark",
-      contrast = "high",
       transparent = true
     },
-    colors = { fluo = "cyan", light = "90", saturation = "60" },
+    colors = { fluo = "cyan", light = "90", saturation = "100" },
     ui = {
       borders = "none",
       aggressive_spell = false,

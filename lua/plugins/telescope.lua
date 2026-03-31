@@ -1,6 +1,5 @@
 return {
   "nvim-telescope/telescope.nvim",
-  tag = "0.1.8",
   dependencies = {
     "nvim-lua/plenary.nvim",
     "echasnovski/mini.files",
@@ -16,10 +15,8 @@ return {
       local path = entry.path or entry.filename or entry[1]
       actions.close(prompt_bufnr)
 
-      -- Open a fresh explorer at the selected path
       mini_files.open(path, false)
 
-      -- Expand branch to include CWD on the left (if CWD is an ancestor)
       vim.schedule(function()
         mini_files.reveal_cwd()
       end)
@@ -29,10 +26,10 @@ return {
       defaults = {
         mappings = {
           i = {
-            ["<M-CR>"] = open_minifiles, -- Alt+Enter
+            ["<M-CR>"] = open_minifiles,
           },
           n = {
-            ["<M-CR>"] = open_minifiles, -- Alt+Enter
+            ["<M-CR>"] = open_minifiles,
           },
         },
       },
@@ -45,4 +42,3 @@ return {
     vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
   end,
 }
-
