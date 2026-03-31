@@ -3,8 +3,12 @@ return {
   lazy = false,
   priority = 1000,
   opts = {
-    theme = { transparent = true },
-    colors = { fluo = "cyan" },
+    theme = { 
+      style = "dark",
+      contrast = "high",
+      transparent = true
+    },
+    colors = { fluo = "cyan", light = "90", saturation = "60" },
     ui = {
       borders = "none",
       aggressive_spell = false,
