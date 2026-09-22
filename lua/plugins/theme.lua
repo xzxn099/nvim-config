@@ -7,7 +7,7 @@ return {
       style = "dark",
       transparent = true
     },
-    colors = { fluo = "cyan", light = "90", saturation = "100" },
+    colors = { fluo = "cyan" },
     ui = {
       borders = "none",
       aggressive_spell = false,
@@ -36,3 +36,5 @@ return {
     vim.api.nvim_set_hl(0, "MiniFilesTitleFocused", { bg = "none" })
   end,
 }
+
+
